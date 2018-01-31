@@ -6,8 +6,12 @@ var path = require("path");
 
 // Sets up the Express App
 // =============================================================
+
+   
+   
+   
 var app = express();
-var PORT = 3000;
+var port = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,6 +19,8 @@ app.use(bodyParser.json());
 
 // Star Wars Characters (DATA)
 // =============================================================
+
+
 var characters = [
   {
     routeName: "yoda",
